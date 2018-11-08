@@ -1,9 +1,11 @@
 import tensorflow as tf
 import numpy as np
 
+tf.reset_default_graph()
+
 # Epochs
-epochs = 20000
-#epochs = 500
+#epochs = 20000
+epochs = 500
 #epochs = 100
 
 # Data
@@ -49,8 +51,8 @@ b_o = tf.Variable(tf.random_normal([1]))
 
 model = tf.sigmoid(tf.matmul(H5, W_o) + b_o)
 cost = tf.reduce_mean(-Y * tf.log(model) - (1 - Y) * tf.log(1 - model))
-train = tf.train.GradientDescentOptimizer(0.01).minimize(cost);
-#train = tf.train.AdamOptimizer(0.01).minimize(cost);
+#train = tf.train.GradientDescentOptimizer(0.01).minimize(cost);
+train = tf.train.AdamOptimizer(0.01).minimize(cost);
 
 predict = tf.cast(model > 0.5, dtype=tf.float32)
 accuracy = tf.reduce_mean(tf.cast(tf.equal(predict, Y), dtype=tf.float32))

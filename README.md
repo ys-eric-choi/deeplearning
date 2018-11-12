@@ -4,6 +4,9 @@ Deep Learning을 공부하면서 배운 내용들을 정리
  - DNN, RNN, CNN, LSTM, etc.
 
 
+
+
+
 ## anaconda를 이용한 tensorflow 설치 시 주의사항
 복습을 위하여 macbook에 아나콘다를 설치하고 가상환경 구축 후 tensorflow를 설치하려고 하는데...
 아래와 같은 message가 출력되면서 설치가 되지 않는다...

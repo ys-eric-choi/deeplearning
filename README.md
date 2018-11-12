@@ -2,11 +2,10 @@
 
 Deep Learning을 공부하면서 배운 내용들을 정리
  - DNN, RNN, CNN, LSTM, etc.
-  
-  
- 
- 
----
+
+<br>
+<br>
+<br>
 
 ## anaconda를 이용한 tensorflow 설치 시 주의사항
 

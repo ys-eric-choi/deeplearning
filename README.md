@@ -16,6 +16,7 @@ Deep Learning을 공부하면서 배운 내용들을 정리
 
 여러가지 원인을 찾아본 결과 하나의 블로그에서 나의 실수를 찾을 수 있었다!
 > 출처: http://disq.us/p/1wflqob 페이지의 Hyeonwook Kim 님 댓글
+> 
 > 현재 기준)python 최신버전을 설치하실 경우, 3.7버전이 설치됩니다. (tensorflow 설치페이지에는 3.6버전 까지만 지원한다고 되어있습니다.)
 > python 3.6버전을 설치하셔도 되고, 저는 https://stackoverflow.com/a... 를 참고하셔서 해결하였습니다.
 

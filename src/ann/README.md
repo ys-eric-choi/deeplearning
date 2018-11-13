@@ -17,7 +17,7 @@
 - tensorflow를 이용한 ann 구현 시 학습 중 NaN이 출력되며 학습이 되지 않는 현상과
   ReLU 함수를 사용할 수 없는 현상에 대해 아래 블로그에서 원인을 찾을 수 있었다.
 
-URL: <http://blog.naver.com/gyrbsdl18/221068979134>
+> URL: <http://blog.naver.com/gyrbsdl18/221068979134>
 ```
 결론 부터 말하자면,
 
@@ -30,10 +30,11 @@ x가 어느 정도만 ( e.g 800 ) 커져도 overflow를 일으키기 때문이�
 ```
 
 - 코드를 아래와 같이 수정 후 epochs이 크거나 ReLU함수를 사용해도 학습이 정상적으로 이뤄지는 것을 확인
+> ann_tensor_1.py
 ```python
-#model = tf.sigmoid(tf.matmul(H5, W_o) + b_o)
-model  = tf.matmul(H5, W_o) + b_o
-#cost = tf.reduce_mean(-Y * tf.log(model) - (1 - Y) * tf.log(1 - model))
-# cost 계산 수식을 이미 만들어진 함수를 사용
-cost = tf.nn.sigmoid_cross_entropy_with_logits(logits=model, labels=Y)
+ 54 #model = tf.sigmoid(tf.matmul(H5, W_o) + b_o)
+ 55 model  = tf.matmul(H5, W_o) + b_o
+ 56 #cost = tf.reduce_mean(-Y * tf.log(model) - (1 - Y) * tf.log(1 - model))
+ 57 # cost 계산 수식을 이미 만들어진 함수를 사용
+ 58 cost = tf.nn.sigmoid_cross_entropy_with_logits(logits=model, labels=Y)
 ```

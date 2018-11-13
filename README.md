@@ -35,7 +35,7 @@ python 3.6버전을 설치하셔도 되고, 저는 https://stackoverflow.com/que
 결론은 내 macbook에는 python 3.7 버전이 설치되어 있었기 때문에  
 anaconda 가상환경 구축 시 python=3 옵션을 주면 3.7버전을 사용하게 된다.
 
-따라서 아래와 같이 pyhton 버전을 명시하여 가상환경을 구축하여
+따라서 아래와 같이 pyhton 버전을 명시하여 가상환경을 구축한 뒤
 정상적으로 tensorflow를 설치할 수 있었다.
 
 ```

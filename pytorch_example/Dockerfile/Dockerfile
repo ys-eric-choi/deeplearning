@@ -112,3 +112,6 @@ RUN git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git \
 # Clean apt-get
 RUN apt-get clean \
 && rm -rf /var/lib/apt/lists/* 
+
+# Add user
+RUN useradd -ms /bin/bash yschoi
